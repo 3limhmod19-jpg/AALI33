@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'IBM Plex Sans Arabic', 'Cairo', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-family-natural: 'IBM Plex Sans Arabic', 'Cairo', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-family-natural);
+    letter-spacing: normal;
+  }
+
+  body {
+    font-family: var(--font-family-natural);
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* In Arabic typography, letter spacing must remain normal to prevent breaking cursive connections */
+  [dir="rtl"],
+  [dir="rtl"] * {
+    letter-spacing: normal !important;
+  }
+
+  /* Mode 1: Natural (IBM Plex Sans Arabic - default) */
+  html.font-mode-plex,
+  body.font-mode-plex,
+  .font-mode-plex {
+    font-family: 'IBM Plex Sans Arabic', 'Cairo', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+
+  /* Mode 2: Modern Standard (Cairo) */
+  html.font-mode-cairo,
+  body.font-mode-cairo,
+  .font-mode-cairo {
+    font-family: 'Cairo', 'IBM Plex Sans Arabic', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+
+  /* Mode 3: Clean System Native (Tahoma, Segoe UI, Arial) */
+  html.font-mode-system,
+  body.font-mode-system,
+  .font-mode-system {
+    font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif !important;
+  }
+
+  /* Soften bold in RTL for natural, non-distorted rendering */
+  [dir="rtl"] .font-extrabold {
+    font-weight: 700;
+  }
+}
+
+.font-mono-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Custom scrollbars for high-density tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

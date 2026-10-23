@@ -1,0 +1,8 @@
+{
+  "name": "Dawana B2B - Iraqi Pharmaceutical Marketplace | سوق الدواء العراقي للأعمال",
+  "description": "B2B pharmaceutical marketplace connecting licensed Iraqi pharmacies, pharmaceutical wholesalers, and scientific bureaus with order splitting, supplier price comparison, and referral tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
